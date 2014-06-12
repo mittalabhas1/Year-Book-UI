@@ -1,0 +1,29 @@
+<div class="small-6 small-centered columns">
+	<form>
+	  <fieldset>
+
+	    <div class="row collapse">
+			<div class="small-3 columns">
+				<span class="prefix">Username</span>
+			</div>
+			<div class="small-9 columns">
+				<input type="text" placeholder="Enter your username..." ng-model="temps.username">
+			</div>
+		</div>
+		<div class="row collapse">
+			<div class="small-3 columns">
+				<span class="prefix">Password</span>
+			</div>
+			<div class="small-9 columns">
+				<input type="password" placeholder="Enter your password..." ng-model="temps.password">
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-12 columns">
+				<input type="submit" class="button columns radius" value="Login" ng-click="temps.tryLogin()">
+			</div>
+			<div class="small-12 columns">{{temps.error}}</div>
+		</div>
+	  </fieldset>
+	</form>
+</div>

@@ -7,7 +7,7 @@
 				<span class="prefix">Full Name</span>
 			</div>
 			<div class="small-9 columns">
-				<input type="text" placeholder="Enter your name..." ng-model="temps.name">
+				<input type="text" placeholder="Enter your name..." ng-model="temps.name" required>
 			</div>
 		</div>
 		<div class="row collapse">
@@ -15,7 +15,7 @@
 				<span class="prefix">Course</span>
 			</div>
 			<div class="small-9 columns">
-				<select ng-model="temps.course">
+				<select ng-model="temps.course" required>
 					<option value="B.Tech. Pulp and Paper Engineering">B.Tech. Pulp and Paper Engineering</option>
 					<option value="IDD Process Engineering with MBA">IDD Process Engineering with MBA</option>
 					<option value="IMT Polymer Science and Technology">IMT Polymer Science and Technology</option>
@@ -27,7 +27,7 @@
 				<span class="prefix">Email</span>
 			</div>
 			<div class="small-9 columns">
-				<input type="text" placeholder="Enter your email..." ng-model="temps.email">
+				<input type="text" placeholder="Enter your email..." ng-model="temps.email" required>
 			</div>
 		</div>
 		<div class="row collapse">
@@ -35,7 +35,7 @@
 				<span class="prefix">Mobile No.</span>
 			</div>
 			<div class="small-9 columns">
-				<input type="text" placeholder="Enter your mobile no..." ng-model="temps.phone">
+				<input type="text" placeholder="Enter your mobile no..." ng-model="temps.phoneNo" required>
 			</div>
 		</div>
 		<div class="row collapse">
@@ -43,7 +43,7 @@
 				<span class="prefix">DOB</span>
 			</div>
 			<div class="small-9 columns">
-				<input type="date" ng-model="temps.dob">
+				<input type="date" ng-model="temps.dob" required>
 			</div>
 		</div>
 		<div class="row collapse">
@@ -51,12 +51,12 @@
 				<span class="prefix">Hometown</span>
 			</div>
 			<div class="small-9 columns">
-				<input type="text" placeholder="Enter your hometown..." ng-model="temps.hometown">
+				<input type="text" placeholder="Enter your hometown..." ng-model="temps.hometown" required>
 			</div>
 		</div>
 		<div class="row">
 			<div class="small-12 columns">
-				<input type="submit" class="button columns radius" value="Update Details">
+				<input type="submit" class="button columns radius" value="Update Details" ng-click="updateUserDetails()">
 			</div>
 			<div class="small-12 columns">{{temps.error}}</div>
 		</div>

@@ -19,22 +19,38 @@ yearBook.controller('UserDetailsCtrl', ['$scope', 'Restangular', '$state',
 
 		  console.log($scope.global.uid);
 		  console.log($scope.global.username);
-		  // $state.transitionTo('home');
-		}, function(error){
-		  console.log(error);
-		}
-		);
+		  
+		  var restResource = Restangular.one('users', $scope.global.uid);
+		  restResource.get().then(
+		  	function(response) {
+		  		// console.log(success.data.length);
+		  		if(response.data.length != 0)
+		  			$state.transitionTo('home');
+		  	});
+
+		});
 
 		$scope.temps.updateUserDetails = function() {
 			var userDetails = {
+				uid: $scope.global.uid,
 				name: $scope.temps.name,
 				course: $scope.temps.course,
 				email: $scope.temps.email,
 				phoneNo: $scope.temps.phoneNo,
 				dob: $scope.temps.dob,
-				hometown: $scope.temps.hometown
+				hometown: $scope.temps.hometown,
+				answers: []
 			};
 
+			var restResource = Restangular.all('users/'+$scope.global.uid);
+			restResource.post(userDetails).then(
+			function(success){
+				localStorage.userDetails = JSON.stringify(userDetails);
+				// console.log(success);
+				$state.transitionTo('home');
+			}, function(error){
+				// console.log(error);
+			});
 
 		}
 

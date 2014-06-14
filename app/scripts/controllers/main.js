@@ -29,3 +29,8 @@ var yearBook = angular.module('yearBookGuiApp');
       }
 
   }]);
+
+  yearBook.controller('OffCanvasDemoCtrl', ['$scope',
+    function ($scope) {
+
+  }]);

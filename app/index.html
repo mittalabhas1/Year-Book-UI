@@ -25,7 +25,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <nav class="top-bar" data-topbar>
+    <!-- <nav class="top-bar" data-topbar>
       <ul class="title-area">
         <li class="name">
           <h1>
@@ -35,7 +35,7 @@
           </h1>
         </li>
       </ul>
-
+    
       <section class="top-bar-section" ng-if="global.isUserAuthenticated">
          
         <ul class="right">
@@ -48,11 +48,47 @@
           <li>&nbsp;</li>
         </ul>
       </section>
+    
+    </nav> -->
 
-    </nav>
+    
+    <div class="off-canvas-wrap" ng-controller="OffCanvasDemoCtrl">
+        <div class="inner-wrap">
+            <nav class="tab-bar">
+                <section class="left-small">
+                    <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+                </section>
 
-    <div class="row">
-        <div class="container" ui-view></div>
+                <section class="middle tab-bar-section">
+                    <h1 class="title">YearBook</h1>
+                </section>
+
+                <section class="top-bar-section" ng-if="global.isUserAuthenticated">                             
+                    <ul class="right">
+                        <li>
+                            <a ng-if="global.isUserAuthenticated">Welcome {{ global.username }}</a>
+                        </li>
+                        <li>
+                           <a ng-if="global.isUserAuthenticated" ng-click="global.logout()">Logout</a>
+                        </li>
+                    </ul>
+                </section>
+
+            </nav>
+
+            <aside class="left-off-canvas-menu">
+                <ul class="off-canvas-list">
+                    <li><a href="#">Left Sidebar</a></li>
+                </ul>
+            </aside>
+            <section class="main-section">
+                <div class="row">
+                    <div class="container" ui-view></div>
+                </div>
+            </section>
+
+            <a class="exit-off-canvas"></a>
+        </div>
     </div>
 
     <!--[if lt IE 9]>

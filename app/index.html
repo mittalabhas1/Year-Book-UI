@@ -25,37 +25,11 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <!-- <nav class="top-bar" data-topbar>
-      <ul class="title-area">
-        <li class="name">
-          <h1>
-            <a>
-              YearBook
-            </a>
-          </h1>
-        </li>
-      </ul>
-    
-      <section class="top-bar-section" ng-if="global.isUserAuthenticated">
-         
-        <ul class="right">
-          <li>
-            <a ng-if="global.isUserAuthenticated">Welcome {{ global.username }}</a>
-          </li>
-          <li>
-            <a ng-if="global.isUserAuthenticated" ng-click="global.logout()">Logout</a>
-          </li>
-          <li>&nbsp;</li>
-        </ul>
-      </section>
-    
-    </nav> -->
 
-    
     <div class="off-canvas-wrap" ng-controller="OffCanvasDemoCtrl">
         <div class="inner-wrap">
             <nav class="tab-bar">
-                <section class="left-small">
+                <section class="left-small" ng-if="global.isUserAuthenticated">
                     <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
                 </section>
 
@@ -63,7 +37,7 @@
                     <h1 class="title">YearBook</h1>
                 </section>
 
-                <section class="top-bar-section" ng-if="global.isUserAuthenticated">                             
+                <section class="top-bar-section" ng-if="global.isUserAuthenticated">
                     <ul class="right">
                         <li>
                             <a ng-if="global.isUserAuthenticated">Welcome {{ global.username }}</a>

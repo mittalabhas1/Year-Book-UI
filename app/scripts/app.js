@@ -4,11 +4,12 @@ var app = angular.module('yearBookGuiApp', [
   'ngResource',
   'ngSanitize',
   'ui.router',
-  'restangular'
+  'restangular',
+  'mm.foundation'
 ]);
 
 app.config(function($stateProvider, $urlRouterProvider) {
-  
+
   $urlRouterProvider.otherwise("/login");
   $stateProvider
     .state('login', {

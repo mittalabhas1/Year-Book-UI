@@ -9,8 +9,8 @@ yearBook.controller('HomeCtrl', ['$scope', 'Restangular', '$state',
       var restResource = Restangular.one('users', $scope.global.uid);
       restResource.get().then(
         function(response){
-          var userDetails = response.data[0];
-          console.log(userDetails);
-          localStorage.userDetails = JSON.stringify(userDetails);
+          localStorage.userDetails = JSON.stringify(response.data[0]);
+          $scope.global.userDetails = response.data[0];
+          // console.log($scope.global.userDetails);
       });
   }]);

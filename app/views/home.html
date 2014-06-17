@@ -1,0 +1,25 @@
+<div class="row home">
+  <div class="small-3 columns userProfile">
+    <div class="row">
+      <div class="user userName">
+        {{ global.userDetails.name }}
+      </div>
+      <div class="user userBranch">
+        {{ global.userDetails.course }}
+      </div>
+      <div class="user userEmail">
+        <i class="fa fa-envelope"></i> <a href="mailto:{{ global.userDetails.email }}" target="_blank">{{ global.userDetails.email }}</a>
+      </div>
+      <div class="user userPhone">
+        <i class="fa fa-phone"></i> {{ global.userDetails.phoneNo }}
+      </div>
+      <div class="user userLocation">
+        <i class="fa fa-home fa-lg"></i> {{ global.userDetails.hometown }}
+      </div>
+      <div class="user userAnswers">
+        <b>Answers given:</b> {{ global.userDetails.answers.length }}
+      </div>
+    </div>
+  </div>
+  <div class="small-9 columns"></div>
+</div>

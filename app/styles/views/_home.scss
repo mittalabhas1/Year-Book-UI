@@ -1,0 +1,28 @@
+.row.home{
+  margin: 50px;
+  font-family: cambria, sans-serif;
+
+  .row{
+    margin: 0;
+  }
+
+  .userProfile{
+    border: 1px solid #aaaaaa;
+    padding: 20px;
+
+    .user{
+      font-size: 14px;
+      margin: 10px 5px;
+
+      &.userName{
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      &.userBranch{
+        font-size: 13px;
+        color: #555555;
+      }
+    }
+  }
+}
